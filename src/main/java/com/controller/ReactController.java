@@ -45,8 +45,6 @@ public class ReactController {
 	@Autowired // 서블릿 주입하기
 	private ServletContext servletContext;
 	
-	// @PostConstruct 어노테이션을 설정해놓은 
-	// init 메소드는 WAS가 띄워질 때 실행된다. 
 	@PostConstruct 
 	public void init() {
 		path2 = servletContext.getRealPath("/championimg/");
