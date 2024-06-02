@@ -123,7 +123,6 @@ function App() {
       <Route path="/logincallback" element={<Logincallback/>} />
       <Route path="/logout" element={<Logout/>} />
     </Routes>
-        
   </div>
 </div>
 
