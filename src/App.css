@@ -14,18 +14,173 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* font-size: calc(6px + 2vmin); */
+  font-size:16px;
+  
+}
+
+.nav {
+  background : black;
+  width : 100%;
+  display : flex;
+  color : white;
+  padding : 20px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.mainchampion{
+  display: block;
+  width : 76px;
+  height:120px;
+  float : left;
+  margin-right: 40px;
+}
+
+.main{
+  width:1160px;
+  margin-top:100px;
+  min-height: 50vh;
+}
+
+.tab{
+  background-color: white;
+  width:45%
+}
+
+.detailchampion{
+  position: relative;
+  top: 100px;
+  left: 300px;
+  width : 100%;
+  display : flex;
+  color : black;
+  padding : 20px;
+}
+
+.detailchampionname{
+  position: relative;
+  top: 0px;
+  left: 380px;
+  width : 100%;
+  color : black;
+  padding : 20px;
+  text-align: left;
+  font-family: 나눔고딕,NanumGothic,돋움,Dotum;
+}
+
+.vschampion{
+  position: relative;
+  left: 1070px;
+}
+
+.vschampionname{
+ align-items: right;
+ justify-content: right;
+ text-align: right;
+ display: relative;
+ position: relative;
+ top : -80px;
+ right: -450px;
+ font-family: 나눔고딕,NanumGothic,돋움,Dotum;
+}
+
+
+.detailline{
+  position: relative;
+  top: -180px;
+  left : -560px;
+  width : 100%;
+  color : black;
+  padding : 20px;
+  text-align: left;
+}
+
+.search{
+  position: relative;
+  top: -40px;
+  width : 100%;
+  display : flex;
+  color : black;
+  padding : 20px;
+  font-family: 나눔고딕
+}
+
+.searchchampion{
+  display: block;
+  float : left;
+  margin: 3px 3px 3px 3px;
+  white-space : nowrap;
+  overflow : hidden;
+  text-overflow : ellipsis;
+  width : 40px;
+  font-family: 나눔고딕;
+}
+
+.detailmain{
+  white-space:nowrap;
+  max-width: 125vh;
+}
+
+.detailpage{
+  min-height:25vmin;
+}
+
+.youtubelist{
+  float : left;
+  margin: 2px 2px 2px 2px;
+  font-family: 나눔고딕
+}
+
+.centeritem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  width: 50%;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+th, td {
+  border-bottom: 1px solid #444444;
+  padding: 10px;
+}
+
+
+.views{
+  width:50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  min-width: 50vh;
+}
+
+textarea {
+  min-width: 50vh;
+  min-height: 20vh; 
+}
+
+.recently{
+  position: fixed;
+  top: 400px;
+  left : 1600px;
+  border: 2px solid #444444;
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {
