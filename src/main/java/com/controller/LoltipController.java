@@ -65,7 +65,6 @@ public class LoltipController {
 	        item.setNext(String.valueOf(next));
 	        item.setPrev(String.valueOf(prev));
 	    }
-
 	    return result; // 조회된 데이터를 반환
 	}
 
