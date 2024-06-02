@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.react.youtube.YoutubeDao">
+
+<insert id="insertyoutube" parameterType="com.react.youtube.YoutubeVO">
+	insert into youtube (champion, line, videoid, vschampion, uploaddate) values (#{champion}, #{line}, #{videoid}, #{vschampion}, #{uploaddate})
+</insert>
+
+
+<select id="selectyoutube" resultType="com.react.youtube.YoutubeVO">
+	select DISTINCT * from youtube where champion=#{champion} and line=#{line} and vschampion=#{vschampion} order by uploaddate desc
+</select>
+
+
+
+
+</mapper>

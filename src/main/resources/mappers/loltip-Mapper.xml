@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.react.loltip.LoltipDao">
+
+<insert id="inserttip" parameterType="com.react.loltip.LoltipVO">
+	insert into lol_tip (idx, views, title, dates, name, detail) values (tip_idx.NEXTVAL, 0, #{title}, sysdate, #{name}, #{detail})
+</insert>
+
+<select id="selecttip" resultType="com.react.loltip.LoltipVO">
+	select rownum, B.* from
+	(select rownum as rnum, A.* from
+	(select * from lol_tip order by idx desc)
+	<![CDATA[
+	A where rownum <=#{end})
+	B where rnum >= #{start}
+	]]>
+</select>
+
+<select id="selectone" resultType="com.react.loltip.LoltipVO">
+	select * from lol_tip where idx=#{idx} 
+</select>
+
+<update id="updatetip" parameterType="com.react.loltip.LoltipVO">
+	update lol_tip set views = views+1 where idx=#{idx}
+</update>
+
+<update id="updatetipwrite" parameterType="com.react.loltip.LoltipVO">
+	update lol_tip set title = #{title}, detail = #{detail}, dates = sysdate where idx=#{idx}
+</update>
+
+<delete id="deletetip" parameterType="com.react.loltip.LoltipVO">
+	delete from lol_tip where idx=#{idx}
+</delete>
+
+<select id="count" resultType="int">
+	select count(*) from lol_tip 
+</select>
+
+<update id="suggestion" parameterType="com.react.loltip.LoltipVO">
+	update lol_tip set up = up+1 where idx=#{idx}
+</update>
+
+
+</mapper>

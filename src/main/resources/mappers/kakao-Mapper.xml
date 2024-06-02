@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.react.kakao.KakaoDao">
+
+<insert id="insertkakao" parameterType="com.react.kakao.KakaoVO">
+	insert into kakaologin (id, name, nickname, email, phone_number) values (#{id}, #{name}, #{nickname}, #{email}, #{phone_number})
+</insert>
+
+
+<select id="selectkakao" resultType="com.react.kakao.KakaoVO">
+	select * from kakaologin where id=#{id} 
+</select>
+
+
+</mapper>
